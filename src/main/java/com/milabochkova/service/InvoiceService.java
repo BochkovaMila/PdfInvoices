@@ -3,10 +3,12 @@ package com.milabochkova.service;
 import com.milabochkova.context.Application;
 import com.milabochkova.model.Invoice;
 import com.milabochkova.model.User;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
+@Component
 public class InvoiceService {
 
     private final UserService userService;
@@ -34,7 +36,4 @@ public class InvoiceService {
         return invoice;
     }
 
-    public UserService getUserService() {
-        return userService;
-    }
 }
