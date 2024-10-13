@@ -5,22 +5,14 @@ import com.milabochkova.service.InvoiceService;
 import com.milabochkova.service.UserService;
 
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.*;
 
 @Configuration
 @ComponentScan(basePackageClasses = ApplicationLauncher.class)
+@PropertySource("classpath:/application.properties")
+@PropertySource(value = "classpath:/application-${spring.profile.active}.properties",
+                        ignoreResourceNotFound = true)
 public class MyFancyPdfInvoicesApplicationConfiguration {
-
-    public UserService userService() {
-        return new UserService();
-    }
-
-    public InvoiceService invoiceService(UserService userService) {
-        return new InvoiceService(userService);
-    }
 
     @Bean
     public ObjectMapper objectMapper() {
