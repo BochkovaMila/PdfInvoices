@@ -1,7 +1,6 @@
 package com.milabochkova;
 
 import com.milabochkova.context.MyFancyPdfInvoicesApplicationConfiguration;
-import com.milabochkova.web.MyFancyPdfInvoicesServlet;
 import jakarta.servlet.ServletContext;
 import org.apache.catalina.Context;
 import org.apache.catalina.LifecycleException;
