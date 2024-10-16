@@ -1,13 +1,11 @@
 package com.milabochkova.service;
 
-import com.milabochkova.context.Application;
 import com.milabochkova.model.Invoice;
 import com.milabochkova.model.User;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 

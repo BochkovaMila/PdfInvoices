@@ -1,9 +1,7 @@
 package com.milabochkova.web;
 
-import com.milabochkova.dto.InvoiceDto;
 import com.milabochkova.model.Invoice;
 import com.milabochkova.service.InvoiceService;
-import jakarta.validation.Valid;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotBlank;
@@ -14,11 +12,11 @@ import java.util.List;
 
 @RestController
 @Validated
-public class MyFancyPdfInvoicesController {
+public class InvoicesController {
 
     private final InvoiceService invoiceService;
 
-    public MyFancyPdfInvoicesController(InvoiceService invoiceService) {
+    public InvoicesController(InvoiceService invoiceService) {
         this.invoiceService = invoiceService;
     }
 

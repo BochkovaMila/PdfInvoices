@@ -1,6 +1,6 @@
 package com.milabochkova;
 
-import com.milabochkova.context.MyFancyPdfInvoicesApplicationConfiguration;
+import com.milabochkova.context.ApplicationConfiguration;
 import jakarta.servlet.ServletContext;
 import org.apache.catalina.Context;
 import org.apache.catalina.LifecycleException;
@@ -31,7 +31,7 @@ public class ApplicationLauncher {
 
     public static WebApplicationContext createApplicationContext(ServletContext servletContext) {
         AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
-        context.register(MyFancyPdfInvoicesApplicationConfiguration.class);
+        context.register(ApplicationConfiguration.class);
         context.setServletContext(servletContext);
         context.refresh();
         context.registerShutdownHook();
