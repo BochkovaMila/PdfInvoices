@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    Hello
+    <span data-th-text="${username}" data-th-remove="tag">[Username]</span>,
+    this is the current date
+    <span data-th-text="${#temporals.format(currentDate, 'dd-MM-yyy HH:mm')}">[currentDate]</span>
+</p>
+<div data-th-if="${username.startsWith('z')}">Your name starts with a lower-case z</div>
+</body>
+</html>
